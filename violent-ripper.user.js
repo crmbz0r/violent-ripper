@@ -11,11 +11,7 @@
 // @noframes
 // @inject-into  page
 // @require      https://cdn.jsdelivr.net/npm/jszip@3.9.1/dist/jszip.min.js
-//
-// @require      file:///A:/Violentmonkey/violent-ripper/lib/state.js
-//
 // @require      https://raw.githubusercontent.com/crmbz0r/violent-ripper/refs/heads/main/lib/state.js
-//
 // @require      .../lib/state.js
 // @require      .../lib/styles.js
 // @require      .../lib/pathUtils.js
