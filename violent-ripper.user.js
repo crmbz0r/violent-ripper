@@ -31,14 +31,14 @@
         ViolentRipper.ui.setupDrag()
 
         // Filter chips
-        elements.panel.querySelectorAll('.jsripper-chip').forEach(chip => {
+        elements.panel.querySelectorAll('.ViolentRipper-chip').forEach(chip => {
             chip.addEventListener('click', () => {
                 const t = chip.dataset.type, { activeTypes } = ViolentRipper.state
                 if (activeTypes.has(t)) {
                     if (activeTypes.size === 1) return
-                    activeTypes.delete(t); chip.className = 'jsripper-chip'
+                    activeTypes.delete(t); chip.className = 'ViolentRipper-chip'
                 } else {
-                    activeTypes.add(t); chip.className = `jsripper-chip active-${t}`
+                    activeTypes.add(t); chip.className = `ViolentRipper-chip active-${t}`
                 }
             })
         })
