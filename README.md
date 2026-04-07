@@ -61,7 +61,7 @@
 **Enable ***Watch Mode** to automatically* capture every new file that loads delayed on the page while you navigate around.  
 Perfect for single page applications and sites that load content dynamically.**
 
-### Auto Mode
+### 💫 Auto Mode
 
 **Enable ***Auto Mode** to automatically* begin collecting everything from the earliest possible moment, even before DOM is loaded.
 Usually delivers a few more files into the collection list, so probably worth to just use it everytimee.**
