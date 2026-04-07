@@ -24,8 +24,14 @@
     'use strict'
 
     document.addEventListener('DOMContentLoaded', function () {
+        // Safety check: ensure all libraries loaded successfully
+        if (!globalThis.ViolentRipper?.getStyles || !globalThis.ViolentRipper?.ui?.buildPanel) {
+            console.error('[ViolentRipper] Fatal: Libraries failed to load. Check script includes.')
+            return
+        }
+
         const styleEl = document.createElement('style')
-        styleEl.textContent = JSRipper.getStyles()
+        styleEl.textContent = ViolentRipper.getStyles()
         document.head.appendChild(styleEl)
 
         const elements = ViolentRipper.ui.buildPanel()
