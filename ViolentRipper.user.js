@@ -1,10 +1,13 @@
 // ==UserScript==
 // @name         ViolentRipper
 // @namespace    https://github.com/crmbz0r/ViolentRipper
-// @version      4.2.0.6
+// @version      4.2.0.61
 // @description  Rips websites using correct local paths and preserves the original folder structure
 // @icon         https://raw.githubusercontent.com/crmbz0r/ViolentRipper/refs/heads/main/icon.png
 // @match        *://*/*
+// @exclude      https://github.com/*
+// @exclude      https://raw.githubusercontent.com/*
+// @exclude      https://gist.github.com/*
 // @grant        GM_xmlhttpRequest
 // @connect      *
 // @run-at       document-start
