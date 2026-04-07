@@ -37,6 +37,9 @@
         const elements = ViolentRipper.ui.buildPanel()
         ViolentRipper.ui.setupDrag()
 
+        // Initialize auto button position next to main button
+        ViolentRipper.ui._updateAutoWatchPosition()
+
         // Filter chips
         elements.panel.querySelectorAll('.ViolentRipper-chip').forEach(chip => {
             chip.addEventListener('click', () => {
@@ -51,7 +54,6 @@
         })
 
         // Button events
-        elements.btn.addEventListener('click', () => elements.panel.classList.toggle('hidden'))
         elements.closeBtn.addEventListener('click', () => elements.panel.classList.add('hidden'))
         elements.scanBtn.addEventListener('click', () => ViolentRipper.scanner.scan())
         elements.watchBtn.addEventListener('click', () => ViolentRipper.scanner.toggleWatchMode())
