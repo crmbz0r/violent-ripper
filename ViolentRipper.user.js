@@ -5,7 +5,6 @@
 // @description  Rips websites using correct local paths and preserves the original folder structure
 // @match        *://*/*
 // @grant        GM_xmlhttpRequest
-// @grant        GM_addStyle
 // @connect      *
 // @run-at       document-start
 // @noframes
@@ -25,7 +24,9 @@
     'use strict'
 
     document.addEventListener('DOMContentLoaded', function () {
-        GM_addStyle(ViolentRipper.getStyles())
+        const styleEl = document.createElement('style')
+        styleEl.textContent = JSRipper.getStyles()
+        document.head.appendChild(styleEl)
 
         const elements = ViolentRipper.ui.buildPanel()
         ViolentRipper.ui.setupDrag()
