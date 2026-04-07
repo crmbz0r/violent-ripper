@@ -13,6 +13,7 @@
 - ✅ Preserves 100% original folder structure
 - ✅ Exports everything as a single ZIP archive
 - ✅ **Watch Mode**: Automatically captures all new files loaded while you browse
+- ✅ **Auto Mode**: Immediately begin collecting page contents before DOM has fully loaded when entering a page
 - ✅ Filter support: Choose exactly what file types you want to rip
 - ✅ Drag & drop UI that remembers positions
 - ✅ Works on **every website** (no domain restrictions)
@@ -57,9 +58,13 @@
 
 ### 👁 Watch Mode
 
-**Enable ***Watch Mode** to automatically* capture every  new file that loads delayed on the page while you navigate around.  
+**Enable ***Watch Mode** to automatically* capture every new file that loads delayed on the page while you navigate around.  
 Perfect for single page applications and sites that load content dynamically.**
-  
+
+### Auto Mode
+
+**Enable ***Auto Mode** to automatically* begin collecting everything from the earliest possible moment, even before DOM is loaded.
+Usually delivers a few more files into the collection list, so probably worth to just use it everytimee.**
 
 ⠣⡞⣈⣕⡑⠋⡃⠫⣣⢬⣃⣅⢇⠇⣗⣺⢮⢰⠥⡀⠁⠤⢃⡧⡱⠖⠐⢄⣧⢂⠲⡢⠆⡠⠁⠢⠒⠉⠶⠩⠧⡗⡾⠤⣼⠃⠼⢆⢚⠜⡵⠅⠘⠺⠽⢁⠂⣶⡛⢻⠻⠻⠏⠿⢠⢈⠦  
 
