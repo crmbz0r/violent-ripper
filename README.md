@@ -104,7 +104,8 @@ Perfect for single page applications and sites that load content dynamically.**
 
 ## 📝 License
 
-**MIT License - Use freely, modify, distribute as you like.**  
+**MIT License - Use freely, modify, distribute as you like.  
+I am ***not*** responsible for ***your actions*** with this userscript. Think twice what to do with the ripped content.**  
 
 
 ⣾⣴⡻⢒⣥⡿⢠⠕⣘⡰⢀⠤⡫⡤⠐⣳⡉⡸⢾⣾⢚⢟⣯⡈⣣⠘⣲⠠⢀⠏⠵⠚⢋⡍⠤⢻⢙⣢⠃⠍⡐⡯⢅⠎⠺⠾⡳⢰⠥⡀⠁⠤⢃⡧⡱⠖⠐⢄⣧⢂⠲⡢⠆⡠⠁⠢⠒  
