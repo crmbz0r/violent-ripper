@@ -4,8 +4,8 @@
                       
        ̷̧̨̧̧̨̛̲̥̗̭͕̥̟͍͕̘̺̭͈̦̮̥̱̹͚͙͇͇̝̠̯͇̫͕͖̺͚̖͈̹̟͚̟̫͔̤̰̬̤͎̹̯̳͍̘̱͚̲̪͔̟̟̲͆̈́͊́̓̂̇́͆͒͗̈́̆̈́̌̆̄̏̒̈́̚͘͜͜͝͠͝͝ͅ
                             ....             
-# <div align="cenr">          Powerful Violentmonkey script for ripping websites, ̷̢̡̛̛̛̜͔̟̖̹̲̺̱͎͕̯̠̜̳͈͍̙́̈́̅͂̆̏̍́̇̑͂͒̎̐͆̈́̿̋͛͗͑̂̽̑͆̃̋̈̍̈́͆͋̒͛́̍̒̃͊̽̌̿̚͘̚   </div> 
-# <div align="cenr">     while preserving original folder structure and relative paths. </div> 
+## <div align="cenr">          Powerful Violentmonkey script for ripping websites, ̷̢̡̛̛̛̜͔̟̖̹̲̺̱͎͕̯̠̜̳͈͍̙́̈́̅͂̆̏̍́̇̑͂͒̎̐͆̈́̿̋͛͗͑̂̽̑͆̃̋̈̍̈́͆͋̒͛́̍̒̃͊̽̌̿̚͘̚   </div> 
+## <div align="cenr">     while preserving original folder structure and relative paths. </div> 
                                             
  
 ┏━┓ ̧̨ ̣ ̄ ̇ ̥ ̣ ̣̣ ̣̣ ̦̦ ̣ ̣̣ ˙ ̄ ̇ ̥ ̣ ̣̣ ▔ ̦̦ ̣ ̣̣ ̦̦ ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
