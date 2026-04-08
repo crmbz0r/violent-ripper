@@ -1,4 +1,4 @@
-# *V!ΘLΞИT RIPPƎЯ*
+#  <div align="center"> *V!ΘLΞИT RIPPƎЯ* </div>
 
 #### *Powerful Violentmonkey userscript for ripping websites while preserving original folder structure and relative paths*
 
