@@ -1,28 +1,29 @@
 // ==UserScript==
-// @name         ViolentRipper
-// @namespace    https://github.com/crmbz0r/ViolentRipper
-// @version      4.2.0.65
-// @description  Rips websites using correct local paths and preserves the original folder structure
-// @icon         https://raw.githubusercontent.com/crmbz0r/ViolentRipper/refs/heads/main/icon.png
-// @match        *://*/*
-// @exclude      https://github.com/*
-// @exclude      https://raw.githubusercontent.com/*
-// @exclude      https://gist.github.com/*
-// @exclude      https://youtube.com/*
-// @grant        GM_xmlhttpRequest
-// @connect      *
-// @run-at       document-start
+// @name        ViolentRipper
+// @namespace   https://github.com/crmbz0r/ViolentRipper
+// @match       *://*/*
+// @icon        https://raw.githubusercontent.com/crmbz0r/ViolentRipper/refs/heads/main/icon.png
+// @grant       GM_xmlhttpRequest
+// @version     4.2.0.66
+// @author      crmbz0r
+// @description Rips website contents (html, js, css & images), auto converts embedded stuff to correct local paths while preserving the original folder structure
+// @exclude     https://github.com/*
+// @exclude     https://raw.githubusercontent.com/*
+// @exclude     https://gist.github.com/*
+// @exclude     https://youtube.com/*
+// @connect     *
+// @run-at      document-start
 // @noframes
-// @inject-into  page
-// @require      https://cdn.jsdelivr.net/npm/jszip@3.9.1/dist/jszip.min.js
-// @require      https://cdn.jsdelivr.net/gh/crmbz0r/ViolentRipper@main/lib/state.js
-// @require      https://cdn.jsdelivr.net/gh/crmbz0r/ViolentRipper@main/lib/styles.js
-// @require      https://cdn.jsdelivr.net/gh/crmbz0r/ViolentRipper@main/lib/pathUtils.js
-// @require      https://cdn.jsdelivr.net/gh/crmbz0r/ViolentRipper@main/lib/collector.js
-// @require      https://cdn.jsdelivr.net/gh/crmbz0r/ViolentRipper@main/lib/fetcher.js
-// @require      https://cdn.jsdelivr.net/gh/crmbz0r/ViolentRipper@main/lib/downloader.js
-// @require      https://cdn.jsdelivr.net/gh/crmbz0r/ViolentRipper@main/lib/scanner.js
-// @require      https://cdn.jsdelivr.net/gh/crmbz0r/ViolentRipper@main/lib/ui.js
+// @inject-into page
+// @require     https://cdn.jsdelivr.net/npm/jszip@3.9.1/dist/jszip.min.js
+// @require     https://cdn.jsdelivr.net/gh/crmbz0r/ViolentRipper@main/lib/state.js
+// @require     https://cdn.jsdelivr.net/gh/crmbz0r/ViolentRipper@main/lib/styles.js
+// @require     https://cdn.jsdelivr.net/gh/crmbz0r/ViolentRipper@main/lib/pathUtils.js
+// @require     https://cdn.jsdelivr.net/gh/crmbz0r/ViolentRipper@main/lib/collector.js
+// @require     https://cdn.jsdelivr.net/gh/crmbz0r/ViolentRipper@main/lib/fetcher.js
+// @require     https://cdn.jsdelivr.net/gh/crmbz0r/ViolentRipper@main/lib/downloader.js
+// @require     https://cdn.jsdelivr.net/gh/crmbz0r/ViolentRipper@main/lib/scanner.js
+// @require     https://cdn.jsdelivr.net/gh/crmbz0r/ViolentRipper@main/lib/ui.js
 // ==/UserScript==
 
 ; (function () {
