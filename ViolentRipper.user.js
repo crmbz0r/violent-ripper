@@ -4,7 +4,7 @@
 // @match       *://*/*
 // @icon        https://raw.githubusercontent.com/crmbz0r/ViolentRipper/refs/heads/main/icon.png
 // @grant       GM_xmlhttpRequest
-// @version     4.2.0.73
+// @version     4.2.0.74
 // @author      crmbz0r
 // @description Rips website contents (html, js, css & images), auto converts embedded stuff to correct local paths while preserving the original folder structure
 // @exclude     https://github.com/*
