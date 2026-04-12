@@ -4,7 +4,7 @@
 // @match       *://*/*
 // @icon        https://raw.githubusercontent.com/crmbz0r/ViolentRipper/refs/heads/main/icon.png
 // @grant       GM_xmlhttpRequest
-// @version     4.2.0.67
+// @version     4.2.0.68
 // @author      crmbz0r
 // @description Rips website contents (html, js, css & images), auto converts embedded stuff to correct local paths while preserving the original folder structure
 // @exclude     https://github.com/*
@@ -35,7 +35,7 @@ if (typeof globalThis === 'undefined') {
 if (typeof ViolentRipper === 'undefined') {
     console.error('[ViolentRipper] Fatal: ViolentRipper object not found. Check if @require files loaded correctly.');
     // Try to initialize manually or provide fallback
-    window.ViolentRipper = {
+    globalThis.ViolentRipper = {
         getStyles: () => '',
         ui: {
             buildPanel: () => ({ panel: document.createElement('div') }),
