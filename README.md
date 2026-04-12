@@ -22,7 +22,7 @@
 - ✅ **Auto Mode**: Immediately begin collecting page contents before DOM has fully loaded when entering a page
 - ✅ Filter support: Choose exactly what file types you want to rip
 - ✅ Drag & drop UI that remembers positions
-- ✅ Works on **every website** (no domain restrictions.. well - except github 😉)
+- ✅ Works on **every website** (no domain restrictions.. well - except github & YT😉)
 - ✅ Proper error handling & status logging
 - ✅ Zero external dependencies except JSZip
               ̷͆̈́͊́̓̂̇̚͘͝͠              ̵̨̢̧̡͓̹̗͇̺͚̯̭̗̲̤͉̪͇̪̼͉̘̪͕̤̤͕͓̠̯͑͋͑̎̀ͅ ̶̤͔̪̊͌́̋̔̈́̍͝
