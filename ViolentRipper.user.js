@@ -4,7 +4,7 @@
 // @match       *://*/*
 // @icon        https://raw.githubusercontent.com/crmbz0r/ViolentRipper/refs/heads/main/icon.png
 // @grant       GM_xmlhttpRequest
-// @version     4.2.0.69
+// @version     4.2.0.71
 // @author      crmbz0r
 // @description Rips website contents (html, js, css & images), auto converts embedded stuff to correct local paths while preserving the original folder structure
 // @exclude     https://github.com/*
@@ -27,9 +27,9 @@
 // @require     https://cdn.jsdelivr.net/gh/crmbz0r/ViolentRipper@main/lib/ui.js
 // ==/UserScript==
 
-// Define globalThis for engines that don't support it (non ViolentMonkey like Tampermonkey)
+// Define 'globalThis' & 'ViolentRipper' for engines that don't support it (non ViolentMonkey like Tampermonkey)
 if (typeof globalThis === 'undefined') {
-    var globalThis = window;
+    window.globalThis = window;
 }
 
 if (typeof ViolentRipper === 'undefined') {
@@ -58,8 +58,8 @@ if (typeof ViolentRipper === 'undefined') {
     };
 }
 
-(function () {
-    'use strict'
+; (function () {
+    'use strict';
 
     document.addEventListener('DOMContentLoaded', function () {
         // Safety check: ensure all libraries loaded successfully
