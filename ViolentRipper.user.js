@@ -4,7 +4,7 @@
 // @match       *://*/*
 // @icon        https://raw.githubusercontent.com/crmbz0r/ViolentRipper/refs/heads/main/icon.png
 // @grant       GM_xmlhttpRequest
-// @version     4.3.2
+// @version     4.3.4
 // @author      crmbz0r
 // @description Rips website contents (html, js, css, images & enhanced types), auto converts embedded stuff to correct local paths while preserving the original folder structure
 // @exclude     https://github.com/*
@@ -85,15 +85,6 @@ if (typeof ViolentRipper === 'undefined') {
             ViolentRipper.ui.toggleEnhancedMode(true)
         }
 
-        // Update chip visual states based on loaded activeTypes
-        elements.panel.querySelectorAll('.ViolentRipper-chip').forEach(chip => {
-            const t = chip.dataset.type
-            if (t === 'enhanced') return
-            if (t !== 'enhanced' && ViolentRipper.state.activeTypes.has(t)) {
-                chip.className = `ViolentRipper-chip active-${t}`
-            }
-        })
-
         // Helper function to save activeTypes to localStorage
         const saveActiveTypes = () => {
             localStorage.setItem(
@@ -102,11 +93,15 @@ if (typeof ViolentRipper === 'undefined') {
             )
         }
 
-        // Filter chips
+        // Initialize chip visual states and attach click handlers in one pass
         elements.panel.querySelectorAll('.ViolentRipper-chip').forEach(chip => {
+            const t = chip.dataset.type
+            if (t === 'enhanced') return
+            chip.className = ViolentRipper.state.activeTypes.has(t)
+                ? `ViolentRipper-chip active-${t}`
+                : 'ViolentRipper-chip'
             chip.addEventListener('click', () => {
-                const t = chip.dataset.type, { activeTypes } = ViolentRipper.state
-                if (t === 'enhanced') return // Skip enhanced toggle, handled separately
+                const { activeTypes } = ViolentRipper.state
                 if (activeTypes.has(t)) {
                     if (activeTypes.size === 1) return
                     activeTypes.delete(t); chip.className = 'ViolentRipper-chip'
@@ -116,6 +111,9 @@ if (typeof ViolentRipper === 'undefined') {
                 saveActiveTypes()
             })
         })
+        // Persist current selection immediately so it survives a refresh
+        // even if the user never interacts with a chip
+        saveActiveTypes()
 
         // Enhanced toggle chip
         if (elements.enhancedToggle) {
@@ -125,16 +123,6 @@ if (typeof ViolentRipper === 'undefined') {
                 s.enhancedMode = !s.enhancedMode
                 localStorage.setItem('ViolentRipper-enhancedMode', s.enhancedMode)
                 ViolentRipper.ui.toggleEnhancedMode(s.enhancedMode)
-                if (s.enhancedMode) {
-                    // Update chip styles for enhanced types based on current activeTypes
-                    const enhancedChips = elements.enhancedChipsContainer.querySelectorAll('.ViolentRipper-chip')
-                    enhancedChips.forEach(chip => {
-                        const t = chip.dataset.type
-                        if (s.activeTypes.has(t)) {
-                            chip.className = `ViolentRipper-chip active-${t}`
-                        }
-                    })
-                }
                 saveActiveTypes()
             })
         }
@@ -156,6 +144,7 @@ if (typeof ViolentRipper === 'undefined') {
 
         // Auto-start
         if (ViolentRipper.state.autoWatchEnabled) {
+            elements.panel.classList.remove('hidden')
             setTimeout(() => {
                 if (!ViolentRipper.state.watchModeActive) ViolentRipper.scanner.toggleWatchMode()
             }, 500)
